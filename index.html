@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>うらまい〜毎日占いサイト〜</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet" />
+    <script language="javascript">
+        img_src = ["img/stone_right_1.png", "img/stone_right_2.png"];
+        num = -1;
+
+        function slide_time() {
+            if (num === 1) {
+                num = 0;
+            } else {
+                num++;
+            }
+            document.getElementById("righting").src = img_src[num];
+        }
+
+        setInterval(slide_time, 600);
+
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="close_top"></div>
+        <div class="close">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div id="vertical">うらまい</div>
+        <div class="button">
+            <a href="uranai.html">
+                <div class="button_img">
+                    <img src="img/stone_right_1.png" id="righting" class="right_size">
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
